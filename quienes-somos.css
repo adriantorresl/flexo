@@ -1,0 +1,115 @@
+body{
+  background-color: #0d004d;
+}
+header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #0d004d;
+  height: 20vh;
+  padding: 0 20px;
+}
+
+.h1,.h3 {
+  display: flex;
+  align-items: center;
+  font-size: 20px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: bold;
+  color: #6b0f1a;
+  background-color: #8d9ec6;
+  border-radius: 10px;
+  padding: 5px 20px;
+}
+.h1 a, .h3 a{
+  text-decoration: none;
+  color: #595959;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.h1 a:hover, .h3 a:hover{
+  transform: scale(1.1);
+  opacity: 0.7;
+}
+
+.h2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.h2 img {
+  flex:1;
+  max-height:20vh; /* Ajusta el tamaño del logo */
+  max-width: auto;
+}
+.h3-container {
+  display: flex;
+  flex-direction: column; /* Acomoda .h3 y .h4 en una columna */
+  align-items: center;
+}
+.h3 {
+  font-size: 20px;
+}
+.h4 {
+  font-size: 12px; /* Texto en tamaño reducido */
+  color: #595959;
+  text-align: center;
+}
+
+main {
+  background-color:#0d004d;
+  display: flex; /* Flexbox para alinear los rectángulos horizontalmente */
+  justify-content: center; /* Centra los rectángulos en el contenedor */
+  align-items: center; /* Centra los rectángulos en el contenedor */
+  height: 90vh; /* Abarca toda la altura */
+  width: 100%; /* Abarca toda la anchura */
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.container {
+  text-align: center;
+  padding: 20px;
+  height: 80vh;
+  width: 600px;
+  justify-content: center;
+  align-items: center;
+}
+
+.dynamic-title {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 45px;
+  color: #6b0f1a;
+  text-transform:capitalize;
+  letter-spacing: 2px;
+  position: relative;
+  opacity: 1;
+  transform: translateY(-20px);
+  animation: fadeInSlide 1s ease-out forwards;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px white;
+}
+
+.about {
+  background-color: #595959;
+  padding: 40px;
+  border-radius: 10px;
+  line-height: 1.8;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  font-size: 20px;
+  text-align: justify;
+}
+.about p {
+  font-size:large;
+  font-weight:bolder;
+  color: white;
+  margin-bottom: 20px;
+  transition: color 0.3s ease;
+}
+.about:hover {
+  transform: translateY(-15px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  text-shadow: 2px 2px 4px black;
+}
+
+

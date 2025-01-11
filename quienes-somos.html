@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="quienes-somos.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav> 
+            <div class="h1"> 
+                <a  href="index.html">Home</a> </div>
+            <div class="h2">
+                <img src="fotos/logo.webp" alt="Flexo Logo"> </div>
+            <div class="h3-container">
+                <div class="h3">
+                    <a href=http://www.gmail.com>Log In</a> </div>
+                <div class="h4" id="google_translate_element"></div>
+            </div>
+        </nav>
+    </header>
+    
+    <main>
+        <section class="container">
+            <h1 class="dynamic-title">About Us</h1>
+            <div class="about">
+                <p>
+                We are a company dedicated to the installation and ignition of industrial machines, 
+                backed by more than 20 years of experience in our work. We have more than 400 machines installed 
+                and that are currently in production, from Canada to Argentina.
+            </p>
+            <p>
+                We have mechanical engineers and technicians, electricians, electronics, and printers. 
+                Our team has experience in a wide variety of flexographic machines.
+            </p>
+        </div>
+    </section>
+
+    <div class="globe-section">
+         <div class="globe-container">
+            <div class="globe">
+            </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="globe.js"></script>
+    <script src="https://unpkg.com/country-to-coordinates@1.0.0/dist/index.min.js"></script>
+    </main>
+</body>
+
+<script type="text/javascript">
+    function googleTranslateElementInit() {
+        new google.translate.TranslateElement({
+            pageLanguage: 'es',
+            includedLanguages: 'es,it,en',
+            layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+        }, 'google_translate_element');
+    }
+</script>
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Proyecto con Tailwind</title>
+  <link href="galeria.css" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <nav> 
+            <div class="h1"> 
+                <a  href="index.html">Home</a> </div>
+            <div class="h2">
+                <img src="fotos/logo.webp" alt="Flexo Logo"> </div>
+            <div class="h3-container">
+                <div class="h3">
+                    <a href=http://www.gmail.com>Log In</a> </div>
+                <div class="h4" id="google_translate_element"></div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="carousel-container">
+        <div class="carousel-track">
+            <!-- Carousel items -->
+            <div class="carousel-item" onclick="showInfo('Uteco Onyx 876 model 140 year 2006', 'Central drum Gearless 8 colors Max material width: 1450 mm Max printing width: 1410 mm Min-max print repeats: 380-800 mm Mechanical speed: 365 m/min Rewinder and unwinder “TAR 800” Automatic control system with 2 tele cameras Automatic central drum washing system Automatic cleaning of printing units Material tear-off: 2-28 kg Anilox 19: 1x80, 3x100, 2x120, 1x140, 2x160, 1x180, 1x200, 1x260, 1x320, 2x420, 4x475 Sleeves 255: 16x380, 8x400, 9x410, 8x420, 10x430, 8x450, 8x470, 9x490, 8x500, 16x510, 8x520, 16x530, 10x550, 16x570, 7x580, 8x600, 16x620, 4x630, 7x640, 7x650, 9x660, 8x670, 7x690, 8x700, 8x750, 8x790, 8x800 Ink tanks: 14            Adapters: 10            Doctor blades: 14 Ink ducts: 8 Viscosimeters Drying system by gas burners Visible in production', 'Immediately available')">
+                <img src="maquinas/Uteco Onyx 876 model 140 year 2006 (3).jpg" alt="Uteco Onyx 876 model 140 year 2006">
+            </div>
+            <div class="carousel-item" onclick="showInfo('Máquina 2', 'Descripción de la Máquina 2', '$2000')">
+                <img src="maquinas/Uteco Onyx 876 model 140 year 2006 (5).jpg" alt="Máquina 2">
+            </div>
+            <div class="carousel-item" onclick="showInfo('Máquina 3', 'Descripción de la Máquina 3', '$2500')">
+                <img src="maquinas/Uteco Onyx 876 model 140 year 2006 (6).jpg" alt="Máquina 3">
+            </div>
+        </div>
+
+        <!-- Controles del carrusel -->
+        <button class="carousel-button left" onclick="moveCarousel(-1)">&#10094;</button>
+        <button class="carousel-button right" onclick="moveCarousel(1)">&#10095;</button>
+        
+        <div class="carousel-nav">
+            <img src="maquinas/Uteco Onyx 876 model 140 year 2006 (3).jpg" alt="Miniatura 1" class="carousel-thumbnail" onclick="jumpToSlide(0)">
+            <img src="maquinas/Uteco Onyx 876 model 140 year 2006 (5).jpg" alt="Miniatura 2" class="carousel-thumbnail" onclick="jumpToSlide(1)">
+            <img src="maquinas/Uteco Onyx 876 model 140 year 2006 (6).jpg" alt="Miniatura 3" class="carousel-thumbnail" onclick="jumpToSlide(2)">
+        </div>
+    </main>
+
+    <!-- Información de la máquina -->
+    <div class="machine-info" id="machine-info">
+        <h3 id="machine-title"></h3>
+        <p id="machine-description"></p>
+        <p id="machine-price"></p>
+        <button class="close-btn" onclick="closeInfo()">Cerrar</button>
+    </div>
+
+    <script>
+let currentSlide = 0;
+const track = document.querySelector('.carousel-track');
+const items = document.querySelectorAll('.carousel-item');
+const thumbnails = document.querySelectorAll('.carousel-thumbnail');
+
+function moveCarousel(direction) {
+    currentSlide = (currentSlide + direction + items.length) % items.length;
+    updateCarousel();
+}
+
+function jumpToSlide(slideIndex) {
+    currentSlide = slideIndex;
+    updateCarousel();
+}
+
+function updateCarousel() {
+    track.style.transform = `translateX(-${currentSlide * 100}%)`;
+    thumbnails.forEach((thumb, index) => {
+        thumb.classList.toggle('active', index === currentSlide);
+    });
+}
+
+function showInfo(title, description, price) {
+    document.getElementById('machine-title').textContent = title;
+    document.getElementById('machine-description').textContent = description;
+    document.getElementById('machine-price').textContent = price;
+    document.getElementById('machine-info').style.display = 'block';
+}
+
+function closeInfo() {
+    document.getElementById('machine-info').style.display = 'none';
+}
+    </script>
+    
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'es',
+                includedLanguages: 'es,it,en',
+                layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+            }, 'google_translate_element');
+        }
+    </script>
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    </html>

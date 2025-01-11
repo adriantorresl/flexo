@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Proyecto con Tailwind</title>
+  <link href="contacto.css" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <nav> 
+            <div class="h1"> 
+                <a  href="index.html">Home</a> </div>
+            <div class="h3-container">
+                <div class="h3">
+                    <a href=http://www.gmail.com>Log In</a> </div>
+                <div class="h4" id="google_translate_element"></div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="contact-container">
+            <div class="left-column">
+                <div class="map-container">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d403.0495119751888!2d-100.2210653337137!3d25.560822899999987!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8662c71ecd1207db%3A0x5f29de462a170192!2sLa%20Herradura%20323%2C%20Sin%20Nombre%20de%20Col%2051%2C%2064985%20Monterrey%2C%20N.L.!5e1!3m2!1ses!2smx!4v1730739942629!5m2!1ses!2smx" width="400" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                <p>Av. La Herradura #323 Club de Golf La Herradura, Monterrey. 64989. Nuevo León, México</p>
+                <a href="https://wa.me/528115776056" class="whatsapp-button" target="_blank">Send WhatsApp</a>
+            </div>
+            <div class="center-column">
+                <img src="fotos/logo.webp" alt="Flexo Logo" class="logo-large">
+            </div>
+            <div class="right-column">
+                <form action="your-email-endpoint" method="POST">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" required></textarea>
+                    <button type="submit">Send</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'es',
+                includedLanguages: 'es,it,en',
+                layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+            }, 'google_translate_element');
+        }
+    </script>
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    </html>
