@@ -1,3 +1,24 @@
+* {
+  border: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a{
+  text-decoration: none;
+  color: #ffffff;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+.nav-bar {
+  align-items: center;
+}
+
+.logo img {
+  flex:1;
+  max-height:20vh; /* Ajusta el tamaño del logo */
+  max-width: auto;
+}
+
 body{
     background-color: #0d004d;
     justify-content: center;

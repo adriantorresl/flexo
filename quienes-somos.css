@@ -4,33 +4,34 @@
   box-sizing: border-box;
 }
 
-body{
+body {
   background-color: #0d004d;
+  margin: 0;
 }
 
-
-
-a{
+a {
   text-decoration: none;
   color: #ffffff;
   transition: opacity 0.3s ease, transform 0.3s ease;
 }
+
 .nav-bar {
   align-items: center;
 }
 
 .logo img {
-  flex:1;
-  max-height:20vh; /* Ajusta el tamaño del logo */
+  flex: 1;
+  max-height: 20vh; /* Ajusta el tamaño del logo */
   max-width: auto;
 }
 
 main {
-  background-color:#0d004d;
+  background-color: #0d004d;
   display: flex; /* Flexbox para alinear los rectángulos horizontalmente */
   justify-content: center; /* Centra los rectángulos en el contenedor */
   align-items: center; /* Centra los rectángulos en el contenedor */
-  height: 90vh; /* Abarca toda la altura */
+  flex-direction: column;
+  height: 100vh; /* Abarca toda la altura */
   width: 100%; /* Abarca toda la anchura */
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
@@ -38,17 +39,17 @@ main {
 .container {
   text-align: center;
   padding: 20px;
-  height: 80vh;
-  width: 600px;
-  justify-content: center;
-  align-items: center;
+  height: auto;
+  width: 100%;
+  max-width: 600px;
+  margin: auto;
 }
 
 .dynamic-title {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: 45px;
   color: #6b0f1a;
-  text-transform:capitalize;
+  text-transform: capitalize;
   letter-spacing: 2px;
   position: relative;
   opacity: 1;
@@ -68,17 +69,50 @@ main {
   font-size: 20px;
   text-align: justify;
 }
+
 .about p {
-  font-size:large;
-  font-weight:bolder;
+  font-size: large;
+  font-weight: bolder;
   color: white;
   margin-bottom: 0px;
   transition: color 0.3s ease;
 }
+
 .about:hover {
   transform: translateY(-15px);
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
   text-shadow: 2px 2px 4px black;
+}
+
+.globe-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  width: 100%;
+}
+
+.globe-container {
+  width: 100%;
+  max-width: 600px;
+  height: 400px;
+}
+
+.globe {
+  width: 100%;
+  height: 100%;
+}
+
+@media (max-width: 768px) {
+  .globe-container {
+    height: 300px;
+  }
+}
+
+@media (max-width: 576px) {
+  .globe-container {
+    height: 200px;
+  }
 }
 
 

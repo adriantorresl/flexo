@@ -15,9 +15,15 @@ body {
   align-items: center;
 }
 
+a{
+  text-decoration: none;
+  color: #ffffff;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
 .logo img {
-  flex:1;
-  max-height:20vh; /* Ajusta el tamaño del logo */
+  flex: 1;
+  max-height: 10vh; /* Ajusta el tamaño del logo */
   max-width: auto;
 }
 
@@ -31,7 +37,7 @@ body {
   transition: 0.2s ease-in-out;
   box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.2);
   background-color: #0d004d;
-  border-radius: 0px;
+  border-radius: 40px;
   border-color: #0d004d;
   text-decoration: none;
   background: inherit;
@@ -48,7 +54,8 @@ body {
   filter: blur(25px);
 }
 
-.card:hover {
+.card:hover,
+.card:active {
   background-color: #595959;
   box-shadow: 2px 30px 30px rgba(0, 0, 0, 0.5);
 }
@@ -83,11 +90,15 @@ body {
   font-weight: normal;
 }
 
-.card:hover .card-background {
+.card:hover .card-background,
+.card:active .card-background {
   transform: scale(1.05) translateZ(0);
 }
 
-.card-grid:hover > .card:not(:hover), .card-content:not(:hover) .card-background  {
+.card-grid:hover > .card:not(:hover),
+.card-grid:active > .card:not(:active),
+.card-content:not(:hover) .card-background,
+.card-content:not(:active) .card-background {
   filter: brightness(0.8) saturate(1) contrast(1.2) blur(10px);
 }
 
